@@ -1,0 +1,50 @@
+\PassOptionsToPackage{unicode}{hyperref}
+\documentclass[aspectratio=1610, professionalfonts, 9pt]{beamer}
+
+\usefonttheme[onlymath]{serif}
+\usetheme[showtotalframes]{tudo}
+\usepackage[ngerman]{datetime}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}  % -- becomes en-dash etc.
+
+% intelligent quotation marks, language and nesting sensitive
+\usepackage[autostyle]{csquotes}
+
+% microtypographical features, makes the text look nicer on the small scale
+\usepackage{microtype}
+
+\ifluatex
+  \usepackage{polyglossia}
+  \setmainlanguage{german}
+\else
+  \ifxetex
+    \usepackage{polyglossia}
+    \setmainlanguage{german}
+  \else
+    \usepackage[german]{babel}
+  \fi
+\fi
+
+
+% Mathematik
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{cancel}
+
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%-------------Hier Titel/Autor/Grafik/Lehrstuhl eintragen--------------%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newdate{date}{25}{01}{2018}
+%Titel:
+\title{Wirkung von Kernwaffen}
+%Autor
+\author[F.~Schierok]{Fabian Schierok}
+\date{\displaydate{date}}
+%Lehrstuhl/Fakultät
+\institute[NRA Seminar]{Naturwissenschaften in Rüstung und Abrüstung}
+%Titelgrafik
+\titlegraphic{\includegraphics[width=0.7\textwidth]{images/tudo-title-2.jpg}}
