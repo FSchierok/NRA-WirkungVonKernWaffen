@@ -1,5 +1,5 @@
 \PassOptionsToPackage{unicode}{hyperref}
-\documentclass[aspectratio=1610, professionalfonts, 9pt]{beamer}
+\documentclass[aspectratio=1610, professionalfonts, 9pt,bibliography=totoc]{beamer}
 
 \usefonttheme[onlymath]{serif}
 \usetheme[showtotalframes]{tudo}
@@ -8,11 +8,12 @@
 \defaultfontfeatures{Ligatures=TeX}  % -- becomes en-dash etc.
 
 % intelligent quotation marks, language and nesting sensitive
-\usepackage[autostyle]{csquotes}
+
 
 % microtypographical features, makes the text look nicer on the small scale
 \usepackage{microtype}
 \usepackage[utf8]{inputenc}
+\usepackage[autostyle]{csquotes}
 
 \ifluatex
   \usepackage{polyglossia}
@@ -26,7 +27,9 @@
   \fi
 \fi
 
-
+\usepackage[backend=biber]{biblatex}
+% Quellendatenbank
+\addbibresource{content/lit.bib}
 % Mathematik
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -35,7 +38,12 @@
 
 \usepackage{hyperref}
 \usepackage{bookmark}
+\usepackage{siunitx}
 
+\AtBeginDocument{\sisetup{math-rm=\mathrm,math-micro=µ}}
+\DeclareSIUnit{\tnt}{kg_{TNT}}
+
+\usepackage[width=0.9\textwidth]{caption}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%-------------Hier Titel/Autor/Grafik/Lehrstuhl eintragen--------------%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
