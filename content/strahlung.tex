@@ -1,8 +1,12 @@
-\section{Effekte von Strahlung auf den Körper}
-\begin{frame}{Strahlendosis}
+\section{Strahlungstypen}
+\begin{frame}{effektive Strahlendosis}
 \begin{itemize}
 	\item wird in \si{\sievert} gemessen
-
+	\item Strahlungs-Wichtungsfaktor $w_R$ gibt Schädlichkeit der Strahlung an
+	\item Organ-Energiedosis $D_{T,R}$ gibt die Absorbierte Energie an
+	\item Gewebe-Wichtungsfaktor $w_T$ gibt Annfälligkeit des Gewebes für Strahlung an
+	\item $E_\mathrm{eff}=\sum_T w_TH_T =\sum_T w_T \sum_R w_RD_{T,R}$
+	\item $T$ geht über alle Organe und $R$ über alle Strahlungtypen
 \end{itemize}
 \end{frame}
 \begin{frame}{Strahlentypen}
@@ -18,7 +22,7 @@
 		\item ${}^4_2\text{HE}^{2+}$-Kern
 		\item sehr geringe Reichweite in Materie
 		\item lässt sich mit wenigen \si{\milli \meter} Papier abschirmen
-		\item Schädigt wenig Gewebe stark, "hohe biologische Wirksamkeit"
+		\item Hoher biologischer Wirkungsfaktor, $w_R=20$
 	\end{itemize}
 \end{frame}
 \begin{frame}{β-Strahlung}
@@ -26,7 +30,7 @@
 	\item $e^-$ oder $e^+$ Teilchen
 	\item mittlere Reichweite in Gewebe
 	\item lässt sich mit einigen \si{\milli \meter} Aluminium abschirmen
-	\item geringere biologische Wirksamkeit als \alpha-Strahlung
+	\item geringe biologische Wirksamkeit, $w_R=1$
 \end{itemize}
 \end{frame}
 \begin{frame}{γ-Strahlung}
@@ -34,7 +38,7 @@
 		\item hochfrequente em-Welle
 		\item große Reichweite im Materie
 		\item lässt sich mit einigen \si{\centi \meter} Blei abschirmen
-		\item geringe biologische Wirksamkeit
+		\item geringe biologische Wirksamkeit $w_R=1$
 	\end{itemize}
 \end{frame}
 \begin{frame}{Neutronenstrahlung}
@@ -43,6 +47,13 @@
 	\item große Reichweite in Materie, Wechseltwirk hauptsächlich mit Wasser /-stoff
 	\item muss erst gebremmst, dann eingefangen und die entstehende \gamma-Strahlung mit Blei abgeschrimt werden
 	\item auf Grund der Wechselwirkung mit Wasser hohe biologische Wirksamkeit
+	\item \begin{description}
+		\item[$E<\SI{10}{\kilo \electronvolt}$] $w_R=5$
+		\item[$\SI{10}{\kilo \electronvolt}<E<\SI{100}{\kilo \electronvolt}$] $w_R=10$
+		\item[$\SI{100}{\kilo \electronvolt}<E<\SI{2}{\mega \electronvolt}$] $w_R=20$
+		\item[$\SI{2}{\mega \electronvolt}<E<\SI{20}{\mega \electronvolt}$] $w_R=10$
+		\item[$\SI{20}{\mega \electronvolt}<E$] $w_R=5$
+	\end{description}\cite{straschuver}
 \end{itemize}
 \end{frame}
 \nocite{BfS}
