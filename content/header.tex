@@ -1,5 +1,6 @@
 \PassOptionsToPackage{unicode}{hyperref}
 \documentclass[aspectratio=1610, professionalfonts, 9pt,bibliography=totoc]{beamer}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
 
 \usefonttheme[onlymath]{serif}
 \usetheme[showtotalframes]{tudo}
@@ -8,7 +9,8 @@
 \defaultfontfeatures{Ligatures=TeX}  % -- becomes en-dash etc.
 
 % intelligent quotation marks, language and nesting sensitive
-
+\usepackage{pdfcomment}
+\newcommand{\pdfnote}[1]{\marginnote{\pdfcomment[icon=note]{#1}}}
 
 % microtypographical features, makes the text look nicer on the small scale
 \usepackage{microtype}
@@ -27,7 +29,7 @@
   \fi
 \fi
 
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber,style=numeric]{biblatex}
 % Quellendatenbank
 \addbibresource{content/lit.bib}
 % Mathematik
@@ -55,6 +57,6 @@
 \author[F.~Schierok]{Fabian Schierok}
 \date{\displaydate{date}}
 %Lehrstuhl/Fakultät
-\institute[NRA Seminar]{Naturwissenschaften in Rüstung und Abrüstung}
+\institute[NRA Seminar]{Naturwissenschaft, Rüstung und Abrüstung - von der Atombombe bis zum Cyberkrieg WiSe2017/18, LSF, 020161}
 %Titelgrafik
 \titlegraphic{\includegraphics[width=0.7\textwidth]{images/tudo-title-2.jpg}}

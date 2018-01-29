@@ -5,11 +5,12 @@
 \end{frame}
 \begin{frame}{effektive Strahlendosis}
 \begin{itemize}
-	\item wird in Sievert $[\si{\sievert}]=\si{\joule \per \kilo \gram}$ gemessen
+	\item Energiedosis gibt Energie pro Masse an, Einheit: Gray $[\si{\gray}]=\si{\joule \per \kilo \gram}$
+	\item Sievet ist die gewichtete Energiedosis $[\si{\sievert}]=\si{\gray}$
 	\item $T$ geht über alle Organe und $R$ über alle Strahlungtypen
 	\item Strahlungs-Wichtungsfaktor $w_R$ gibt Schädlichkeit der Strahlung an
 	\item Organdosis $H_T$ gibt die jeweils absorbierte Strahldosis an
-	\item Organ-Energiedosis $D_{T,R}$ gibt die Absorbierte Energie an
+	\item Organ-Energiedosis $D_{T,R}$ gibt die absorbierte Energie an
 	\item Gewebe-Wichtungsfaktor $w_T$ gibt Anfälligkeit des Gewebes für Strahlung an
 	\item $E_\mathrm{eff}=\sum_T w_TH_T =\sum_T w_T \sum_R w_RD_{T,R}$
 \end{itemize}
@@ -18,9 +19,10 @@
 	\begin{description}
 		\item[$w_T=0.20$] Keimdrüsen
 		\item[$w_T=0.12$] Knochenmark, Dickdarm, Lunge, Magen
-		\item[$w_T=0.05$] Blase, Brust, Leber, Speiseröhre, Schilddrüse, Andere
+		\item[$w_T=0.05$] Blase, Brust, Leber, Speiseröhre, Schilddrüse, andere
 		\item[$w_T=0.01$] Haut, Knochenoberfläche
 	\end{description}
+	\pdfnote{$w_T$ geschätzte Werte über Alter und Geschlecht gemittelt}
 \end{frame}
 \begin{frame}{Strahlentypen}
 	\begin{itemize}
@@ -35,29 +37,34 @@
 		\item He-Kern
 		\item sehr geringe Reichweite in Materie
 		\item lässt sich mit wenigen \si{\milli \meter} Papier abschirmen
+		\item ca. \SI{50}{\micro \meter} Eindringtiefe in Gewebe
 		\item Hoher biologischer Wirkungsfaktor, $w_R=20$
 	\end{itemize}
+	\pdfnote{\alpha Strahler verschlucken}
 \end{frame}
 \begin{frame}{β-Strahlung}
 \begin{itemize}
 	\item $e^-$ oder $e^+$ Teilchen
 	\item mittlere Reichweite in Gewebe
 	\item lässt sich mit einigen \si{\milli \meter} Aluminium abschirmen
+	\item ca. \SI{5}{\milli \meter} Eindringtiefe in Gewebe
 	\item geringe biologische Wirksamkeit, $w_R=1$
 \end{itemize}
 \end{frame}
 \begin{frame}{γ-Strahlung}
 	\begin{itemize}
-		\item hochfrequente em-Welle
+		\item hochfrequente em-Welle bzw. hoch energetisches Photon
 		\item große Reichweite im Materie
 		\item lässt sich mit einigen \si{\centi \meter} Blei abschirmen
+		\item ca. \SI{10}{\centi \meter} Halbwertsbreite in Gewebe
 		\item geringe biologische Wirksamkeit $w_R=1$
 	\end{itemize}
+ \nocite{uni_giessen}
 \end{frame}
 \begin{frame}{Neutronenstrahlung}
 \begin{itemize}
-	\item große Reichweite in Materie, Wechseltwirkt hauptsächlich mit Wasser /-stoff
-	\item muss erst gebremmst, dann eingefangen und die entstehende \gamma-Strahlung mit Blei abgeschrimt werden
+	\item große Reichweite in Materie, wechselwirkt hauptsächlich mit Wasser /-stoff
+	\item muss erst gebremst, dann eingefangen und die entstehende \gamma-Strahlung mit Blei abgeschrimt werden
 	\item auf Grund der Wechselwirkung mit Wasser hohe biologische Wirksamkeit
 	\item \begin{description}
 		\item[$E<\SI{10}{\kilo \electronvolt}$] $w_R=5$
